@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <link
+    href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap"
+    rel="stylesheet"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+    <link
+    rel="shortcut icon"
+    sizes="16x16 32x32 64x64"
+    href="https://image.flaticon.com/icons/svg/3281/3281000.svg"
+    />
+    <title>Magic Result</title>
+    <meta charset="utf-8" />
+  </head>
+    <body>
+      <header id="result_header_box">
+        <h1 id="title">
+          <a href="/" id="home_link">
+            <img
+            id="title_icon"
+            src="https://image.flaticon.com/icons/svg/3281/3281000.svg"
+            />Magic Search
+          </h1>
+        </a>
+      </header>
+      <div id="button_box">
+      <a href="/" class="a_Btn"><div class="button" id="home_btn">Home</div></a>
+      <a href="/export?search_input={{search_input}}" class="a_Btn"><div class="button" id="download_btn">Download</div></a>
+    </div>
+    <p id="total">{{total}} jobs are searched!</p>
+      <main id="result_main">
+    <div class="result_container">
+      {% for stack in stack_result %}
+      <div class="result_box">    
+        <div class="job_box">
+          <div class="title">{{stack.title}}</div>
+          <div class="company">{{stack.company}}</div>
+          <div class="platform">posted on StackOverFlow</div>
+        </div>
+        <a href="{{stack.link}}" class="apply_link" target="_blank"><div class="apply_box">Apply</div></a>                                   
+      </div>
+      {% endfor %}  
+    </div> 
+    <div class="result_container">
+      {% for wework in wework_result %}
+      <div class="result_box">
+        <div class="job_box">
+          <div class="title">{{wework.title}}</div>
+          <div class="company">{{wework.company}}</div>
+          <div class="platform">posted on WeWork</div>
+        </div>                
+        <a href="{{wework.link}}" class="apply_link" target="_blank"><div class="apply_box">Apply</div></a>      
+      </div>
+      {% endfor %}
+    </div>    
+    <div class="result_container">
+      {% for remoteok in remoteok_result%}
+      <div class="result_box">
+        <div class="job_box">
+          <div class="title">{{remoteok.title}}</div>
+          <div class="company">{{remoteok.company}}</div>
+          <div class="platform">posted on RemoteOk</div>
+        </div>              
+        <a href="{{remoteok.link}}" class="apply_link" target="_blank"><div class="apply_box">Apply</div></a>      
+      </div>
+      {% endfor %}
+    </div>    
+    </main>
+    <div id="test"></div>
+    </body>
+</html>

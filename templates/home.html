@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <link
+    href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap"
+    rel="stylesheet"
+    />
+    <link
+    href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap"
+    rel="stylesheet"
+    />
+    <link
+      rel="shortcut icon"
+      sizes="16x16 32x32 64x64"
+      href="https://image.flaticon.com/icons/svg/3281/3281000.svg"
+      />
+      <title>Magic Search</title>
+      <meta name="description" content="Nomad Python Final Project" />
+      <meta charset="utf-8" />
+    </head>
+    <body>
+      <header id="header_box">
+        <h1 id="title">
+          <a href="/" id="home_link">
+          <img
+            id="title_icon"
+            src="https://image.flaticon.com/icons/svg/3281/3281000.svg"
+          />Magic Search
+        </h1>
+      </a>
+      </header>
+      <main id="home_mainTag">
+        <div id="input_box">
+          <form action="/result">
+            <img
+              id="searchicon"
+              src="https://image.flaticon.com/icons/svg/483/483356.svg"
+            />
+            <input id="search_input" name="search_input" type="search" placeholder="i.e.python" />
+          </form>
+          <div id="under_input">* Search your remote job from 3 different plaforms</div>
+        </div>
+      </main>
+    </body>
+</html>

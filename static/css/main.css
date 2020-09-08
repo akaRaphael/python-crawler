@@ -1,0 +1,241 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  font-family: "Major Mono Display", monospace;
+}
+body {
+  background-color: #e9edff;
+}
+#header_box {
+  /*로고를 담고있는 header*/
+  height: 40vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+#title_icon {
+  /*로고 옆 마법책 아이콘*/
+  width: 80px;
+  height: 80px;
+  position: relative;
+  top: 10px;
+  left: -20px;
+}
+#title {
+  /*페이지 중앙에 나오는 로고(Magic Search)*/
+  font-size: 4.5vh;
+  position: relative;
+}
+#home_link {
+  /* 로고를 포함하는 a태그*/
+  text-decoration: none;
+  color: black;
+}
+#home_mainTag {
+  /* 입력창 부분을 담고있는 body의 main태그*/
+  margin-top: 3vh;
+  height: 20vh;
+  display: flex;
+  justify-content: center;
+}
+#searchicon {
+  /*돋보기 아이콘*/
+  width: 30px;
+  height: 30px;
+  position: relative;
+  top: 10px;
+  left: 13px;
+}
+#input_box {
+  /*검색어 입력창을 담고있는 div*/
+  margin-top: 10px;
+  width: 350px;
+  height: 50px;
+  border-radius: 25px;
+  background-color: white;
+}
+#search_input {
+  /*검색어 입력창*/
+  background-color: transparent;
+  border: none;
+  border-radius: 12px;
+  position: relative;
+  width: 280px;
+  height: 40px;
+  top: 5px;
+  left: 20px;
+  font-size: 25px;
+  margin-bottom: 25px;
+  font-family: "Nanum Gothic", sans-serif;
+}
+#search_input:focus {
+  /*검색어 입력창 클릭하면 생기는 테두리 제거*/
+  outline: none;
+  background-color: transparent;
+}
+#under_input {
+  /*input 아래에 설명란*/
+  position: relative;
+  left: -20px;
+  font-size: 16px;
+  width: 430px;
+  font-family: "Nanum Gothic", sans-serif;
+}
+
+/* ----------------------------------- 여기까지 home.html에 적용된 CSS*/
+@keyframes random-bg {
+  0% {
+    background-color: tomato;
+  }
+  20% {
+    background-color: greenyellow;
+  }
+  40% {
+    background-color: hotpink;
+  }
+  80% {
+    background-color: turquoise;
+  }
+  100% {
+    background-color: violet;
+  }
+}
+#result_header_box {
+  height: 12vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+#result_main {
+  height: 84vh;
+  display: flex;
+  justify-content: center;
+}
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2vh;
+  width: 4vw;
+  height: 4vh;
+  border-radius: 12px;
+  border: 1px solid whitesmoke;
+  background-color: lightsteelblue;
+  color: black;
+  margin-left: 10px;
+  font-family: "Roboto", sans-serif;
+}
+.button:hover {
+  animation: random-bg 0.5s linear infinite;
+}
+.button:focus {
+  outline: none;
+}
+.a_Btn {
+  text-decoration: none;
+  color: black;
+}
+#button_box {
+  display: flex;
+  justify-content: center;
+  width: 10vw;
+  position: relative;
+  left: 9vw;
+  top: 7vh;
+}
+
+.result_container {
+  margin-top: 10vh;
+  margin-right: 5vh;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+  border: 2px solid black;
+  height: 60vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  width: 24vw;
+}
+
+.result_container::-webkit-scrollbar {
+  width: 0.3vw;
+}
+.result_container::-webkit-scrollbar-thumb {
+  background-color: slategrey;
+  border-radius: 25px;
+}
+.result_container::-webkit-scrollbar-track {
+  background-color: grey;
+  border-radius: 10px;
+  box-shadow: inset 0px 0px 5px white;
+  height: 10px;
+}
+
+.result_box {
+  width: 23vw;
+  display: flex;
+  border-bottom: 1px solid black;
+}
+.job_box {
+  margin: 1vh;
+  position: relative;
+  width: 18vw;
+  height: 10vh;
+  border-radius: 25px;
+}
+.apply_link {
+  margin-top: 1vh;
+  width: 3.5vw;
+  height: 10vh;
+  border-radius: 2vh;
+  background-color: mediumseagreen;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: black;
+}
+.apply_box {
+  color: white;
+  width: 3vw;
+  height: 6vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Roboto", sans-serif;
+  font-size: 2vh;
+}
+.title {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.5vh;
+  width: 16vw;
+  height: 3vh;
+  position: relative;
+  left: 1vw;
+  top: 1vh;
+}
+.company {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.2vh;
+  width: 16vw;
+  position: relative;
+  left: 1vw;
+  top: 3.5vh;
+}
+.platform {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.2vh;
+  width: 16vw;
+  position: relative;
+  left: 1vw;
+  top: 4vh;
+}
+#total {
+  position: relative;
+  font-family: "Roboto", sans-serif;
+  width: 15vw;
+  font-size: 2vh;
+  left: 42vw;
+  top: 3vh;
+}
